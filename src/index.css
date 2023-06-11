@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
+.title-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.fa-trash,
+.fa-pen-to-square {
+  cursor: pointer;
+}
