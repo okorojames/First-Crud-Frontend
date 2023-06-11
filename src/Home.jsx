@@ -13,12 +13,15 @@ const Home = () => {
     data: cruds,
     error,
     pending,
-  } = useFetch("http://localhost:8000/crud/get-cruds");
+  } = useFetch("https://crud-backend-grmu.onrender.com/crud/get-cruds");
   const deleteCrud = async (id) => {
     try {
-      const res = await fetch(`http://localhost:8000/crud/delete-crud/${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `https://crud-backend-grmu.onrender.com/crud/delete-crud/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       console.log(res);
       location.reload();
     } catch (err) {

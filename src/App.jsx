@@ -1,5 +1,11 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  Link,
+} from "react-router-dom";
 import NewCrud from "./NewCrud";
 import Home from "./Home";
 import UpdateCrud from "./UpdateCrud";
@@ -8,7 +14,10 @@ import { AnimatePresence } from "framer-motion";
 function App() {
   const location = useLocation();
   return (
-    <main className="container my-5">
+    <main className="container my-5 app__container">
+      <Link to="/" className="home__link">
+        Home
+      </Link>
       <AnimatePresence>
         <Routes location={location} key={location.key}>
           <Route exact path="/" element={<Home />} />

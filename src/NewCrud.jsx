@@ -18,13 +18,16 @@ const NewCrud = () => {
   const postCrud = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8000/crud/post-crud/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newCrud),
-      });
+      const res = await fetch(
+        "https://crud-backend-grmu.onrender.com/crud/post-crud/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newCrud),
+        }
+      );
       console.log(res);
       navigate("/");
     } catch (err) {

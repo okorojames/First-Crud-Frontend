@@ -26,7 +26,9 @@ const UpdateCrud = () => {
   useEffect(() => {
     const getSingleCrud = async () => {
       try {
-        const res = await fetch(`http://localhost:8000/crud/get-crud/${id}`);
+        const res = await fetch(
+          `https://crud-backend-grmu.onrender.com/crud/get-crud/${id}`
+        );
         const data = await res.json();
         setCrud(data);
         setTitle(data.title);
@@ -44,13 +46,16 @@ const UpdateCrud = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:8000/crud/update-crud/${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ title, author, description }),
-      });
+      const res = await fetch(
+        `https://crud-backend-grmu.onrender.com/crud/update-crud/${id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ title, author, description }),
+        }
+      );
       console.log(res);
       navigate("/");
     } catch (err) {

@@ -15,3 +15,13 @@ body {
 .fa-pen-to-square {
   cursor: pointer;
 }
+.home__link {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color: #dc3545;
+}
+.app__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
