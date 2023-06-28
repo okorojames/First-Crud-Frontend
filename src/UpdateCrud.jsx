@@ -72,7 +72,7 @@ const UpdateCrud = () => {
           x: -3000,
           originY: 0,
           transition: {
-            duration: 0.3,
+            duration: 0.25,
             ease: "easeInOut",
           },
         }}
