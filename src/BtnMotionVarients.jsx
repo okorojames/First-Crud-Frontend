@@ -9,7 +9,7 @@ const BtnMotionVarientsProvider = ({ children }) => {
     visible: {
       x: 0,
       transition: {
-        duration: 2.5,
+        duration: 2.8,
         type: "spring",
         damping: 8,
         stiffness: 85,
