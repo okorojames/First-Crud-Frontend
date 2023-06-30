@@ -38,7 +38,7 @@ const Home = () => {
         x: -3000,
         originY: 0,
         transition: {
-          duration: 0.3,
+          duration: 0.28,
           ease: "easeInOut",
         },
       }}
